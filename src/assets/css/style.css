@@ -9,10 +9,6 @@ body {
     color: #fff;
 }
 
-a {
-    color: #fff;
-}
-
 img{
     display: block;
     margin: auto;
@@ -31,10 +27,11 @@ header {
     text-transform: uppercase;
 }
 
-header a {
+nav > * {
     display: inline-block;
     margin: 5px;
     padding: 5px;
+    color: white;
 }
 
 h2 {
@@ -52,9 +49,9 @@ p {
     margin: 0 0 15px;
 }
 
-header a:hover,
-header a:active {
-    color: #333;
+nav > *:hover,
+nav > *:active {
+    color: #2f68db;
     background-color: #fff;
     border-radius: 10px;
 
@@ -98,7 +95,7 @@ article p:not(article p:last-child){
 }
 
 #resultDiv {
-    display: none;
+    display: block;
     position: absolute;
     min-width: 230px;
     margin: -1em 1em 0 0;
@@ -115,19 +112,20 @@ article p:not(article p:last-child){
 li {
     color: black;
     list-style: none;
+    cursor: pointer;
 }
 
 #resultsContainer {
     margin-top: 2em;
 }
 
-#resultDiv a {
+#resultDiv li {
     display: block;
-    color: black;
+    color: rgb(29, 1, 173);
     padding-left: .5em;
 }
 
-#resultDiv a:hover {
+#resultDiv li:hover {
     color: red;
     cursor: pointer;
 }
