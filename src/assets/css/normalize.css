@@ -1,0 +1,237 @@
+/*
+Ajout des la section "Tools"
+Ajout des marges et des paddings dans le body
+Ajout du lien survolé dans la section "Generalities"
+Ajout de main at de article dans la section "Generalities"
+Ajout du container dans la section "Container"
+Ajout de la section "Cards"
+Ajout de la classe .code dans la section "Various"
+*/
+/* *****************************************************************
+TOOLS
+***************************************************************** */
+
+* {
+	box-sizing: border-box; /* On spécifie que la largeur (width) de chaque boîte comprend le padding et la bordure (par défaut, c'est seulement la largeur du contenu) */
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%; /* 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+}
+
+body {
+	font-size: 1.6rem; /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
+}
+
+/* *****************************************************************
+GENERALITIES
+***************************************************************** */
+
+/* Le corps du document */
+body {
+	line-height: 1.5;
+	font-family: sans-serif;
+	color: #555;
+	background-color: #eee;
+}
+
+/* Le titre principal d'un flux */
+h1 {
+	font-size: 4rem;
+	color: #DD5735;
+}
+
+/* Le titre de second niveau  */
+h2 {
+	font-size: 3.2rem;
+	color: #333;
+}
+
+/* Le titre de troisième niveau */
+h3 {
+	font-size: 2.4rem;
+}
+
+/* Les liens */
+a {
+	text-decoration: none;
+	color: #DD5735;
+}
+
+/* *****************************************************************
+CONTAINER
+***************************************************************** */
+
+/* Le container permet de limiter la largeur d'un contenu */
+.container {
+	max-width: 1100px; /* On donne une largeur au container */
+	margin-left: auto; /* On centre son contenu */
+	margin-right: auto;
+}
+
+/* *****************************************************************
+MAIN LAYOUT
+***************************************************************** */
+
+/* L'entête de la page */
+.header {
+	text-align: center;
+	color: #999;
+	background-color: #444;
+}
+
+/* Le pied de page */
+.footer-3WA {
+	text-align: center;
+	color: #fff;
+	background-color: #444;
+}
+
+/* *****************************************************************
+CARDS
+***************************************************************** */
+
+.card,
+.cards > * {
+	background-color: #fff;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+
+/* *****************************************************************
+VARIOUS
+***************************************************************** */
+
+/* Utile pour mettre en évidence un parent */
+.parent {
+	border: 1px dashed #DD5735;
+}
+
+/* Utile pour mettre en forme du code informatique */
+.code {
+	font-family: Monaco, monospace;
+	font-size: 14px;
+	color: #000;
+	background-color: #ddd;
+	border: 1px solid #bbb;
+}
+
+/* *****************************************************************
+TABLE
+***************************************************************** */
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table th, 
+table td {
+	border: 1px solid #ddd;
+}
+
+thead {
+	text-align: center;
+}
+
+thead th {
+	border-bottom: 1px solid black;
+}
+
+tfoot th {
+	border-top: 1px solid black;
+}
+
+table > tbody > tr:nth-child(odd) td {
+    background-color: #ccc;
+}
+
+/* *****************************************************************
+FORM
+***************************************************************** */
+/* Style pour une barre d'outils => ou placer les boutons */
+.toolbar {
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 0.5em;
+}
+
+fieldset {
+    font-size: 1.6rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 0.5em;
+}
+
+legend {
+	font-size: 1.8rem;
+}
+
+.field {
+    display: flex;
+}
+
+.button {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #DD5735;
+    border: 1px solid #DD5735;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+ 
+.button:hover {
+    text-decoration: none;
+    color: #DD5735;
+    background-color: #fff;
+}
+
+/* ----- Les différents items de la liste déroulante (SELECT) */
+/*
+item {
+* Choisir l'objet de ma demande... (value = 0)
+* Question d'ordre général (value = q)
+* Déclarer un bug gênant (value = g)
+* Déclarer un bug bloquant (value = b)
+}*/
+
+.field label {
+	width: 30%;
+}
+
+.field .value {
+	width: 70%;
+}
+
+.field input {
+	width: 100%;
+}
+
+.field + .field {
+	border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Style de chaque input */
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type*="date"],
+select,
+textarea {
+	display: inline-block;
+	font-size: 1.6rem;
+	color: #333;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 0.5em;
+}
+select,
+textarea {
+	width: 100%;
+}
+textarea {
+	display: block;
+	min-height: 10em;
+}
